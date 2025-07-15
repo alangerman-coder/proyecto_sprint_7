@@ -52,11 +52,11 @@ if build_histogram:  # si la casilla de verificación está seleccionada
 car_data = pd.read_csv('vehicles_us.csv')
 
 # Crear un botón en la aplicación Streamlit
-build_histogram = st.button('Construir histograma')
+build_histogram = st.button('Construir un diagrama de dispersion')
 
 if build_histogram:  # si la casilla de verificación está seleccionada
     st.write(
-        'Construir un diagrama de dispersio para las columnas Relación entre Odómetro y Precio')
+        'Construir un diagrama de dispersion para las columnas Relación entre Odómetro y Precio')
 
     # Crear un scatter plot utilizando plotly.graph_objects
     # Se crea una figura vacía y luego se añade un rastro de scatter
