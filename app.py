@@ -2,6 +2,23 @@ import pandas as pd
 import plotly.graph_objects as go  # Importación de plotly.graph_objects como go
 import streamlit as st
 
+# Título de la app
+st.title("Análisis de Vehiculos")
+# Cargar los datos
+
+
+@st.cache_data
+def cargar_datos():
+    # Simulación de carga, reemplaza esto con tu CSV o fuente real
+    df = pd.read_csv("vehicles_us.csv")  # Leer archivo
+    return df
+
+
+df = cargar_datos()
+# Mostrar tabla
+st.subheader("Vista previa del dataset")
+st.dataframe(df.head(50))  # Muestra los primeros 50 por rendimiento
+
 # Leer los datos del archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')
 
