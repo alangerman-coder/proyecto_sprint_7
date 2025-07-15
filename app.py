@@ -24,3 +24,10 @@ if hist_button:
     # Mostrar el gráfico Plotly interactivo en la aplicación Streamlit
     # 'use_container_width=True' ajusta el ancho del gráfico al contenedor
     st.plotly_chart(fig, use_container_width=True)
+
+
+# crear una casilla de verificación
+build_histogram = st.checkbox('Construir un histograma')
+
+if build_histogram:  # si la casilla de verificación está seleccionada
+    st.write('Construir un histograma para la columna odómetro')
